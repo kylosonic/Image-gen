@@ -102,6 +102,17 @@ const ImageGenerator: React.FC = () => {
             </div>
         )}
       </div>
+      {generatedImage && !isLoading && (
+        <a
+          href={generatedImage}
+          download="gemini-generated-image.jpeg"
+          className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-md transition-colors duration-200 text-center flex items-center justify-center"
+          aria-label="Download generated image"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+          Download Image
+        </a>
+      )}
     </div>
   );
 };
